@@ -35,6 +35,12 @@ export function Home() {
       alert("A sala que você procura não existe")
       return
     }
+
+    if (roomRef.val().endedAt){
+      alert('Esta sala já foi fechada')
+      return
+    }
+
     history.push(`/rooms/${roomCode}`)
   }
 
