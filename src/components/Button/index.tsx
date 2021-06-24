@@ -1,4 +1,4 @@
-import '../styles/button.scss'
+import './styles.scss'
 import { ButtonHTMLAttributes } from "react"
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>
