@@ -1,6 +1,5 @@
 ![Project Logo](/src/assets/images/logo.svg)
-
-**NLW6 REACT APP: *LETMEASK***
+## NLW6 REACT APP: *LETMEASK* 
 
 ![Project Screenshot](/gthbmd/screenshot01.png)
 
@@ -27,10 +26,20 @@ In the core 5 days of this project, the following technologies were explored:
 - [x] Contexts
 - [x] authentication
 - [x] Deployment
-- [x] classnames [lib]
+- [x] classnames `[lib]`
 
 ## Google Firebase
 - [x] Realtime Database
 - [x] Social Authentication
 - [x] Storaging
 - [x] Deployment
+
+##
+
+# Later Adds and Updates
+- [x] Link to Homescreen when clicking `logo image`
+- [x] Redirect to administration room when a new room is created
+- [ ] Show status of minor action of copy a room adress
+- [ ] Remove active watchers when a room is closed
+- [ ] Re-theme the app
+- [ ] Add a dark theme option
