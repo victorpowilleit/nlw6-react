@@ -25,21 +25,23 @@ In the core 5 days of this project, the following technologies were explored:
 - [x] Side Effects
 - [x] Contexts
 - [x] authentication
+- [x] websockets
 - [x] Deployment
 - [x] classnames `[lib]`
 
 ## Google Firebase
 - [x] Realtime Database
 - [x] Social Authentication
-- [x] Storaging
+- [x] Managing Storage
 - [x] Deployment
 
 ##
 
 # Later Adds and Updates
-- [x] Link to Homescreen when clicking `logo image`
+- [x] Link to Home Screen when clicking `logo image`
 - [x] Redirect to administration room when a new room is created
-- [ ] Show status of minor action of copy a room adress
+- [ ] Show status of minor action of copy a room address
 - [ ] Remove active watchers when a room is closed
 - [ ] Re-theme the app
 - [ ] Add a dark theme option
+- [ ] Responsiveness
