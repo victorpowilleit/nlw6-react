@@ -6,7 +6,6 @@ import { database } from '../../services/firebase'
 import { Button } from '../../components/Button'
 import { RoomCode } from '../../components/RoomCode'
 
-import logoImg from '../../assets/images/logo.svg'
 import deleteImg from '../../assets/images/delete.svg'
 import checkImg from '../../assets/images/check.svg'
 import answerImg from '../../assets/images/answer.svg'
@@ -14,6 +13,7 @@ import answerImg from '../../assets/images/answer.svg'
 import './styles.scss'
 import { Question } from '../../components/Question'
 import { useRoom } from '../../hooks/useRoom'
+import { LogoBtn } from '../../components/LogoBtn'
 
 
 type RoomParams = {
@@ -73,7 +73,7 @@ export function AdminRoom() {
       <div id="page-room">
         <header>
           <div className="content">
-            <img src={logoImg} alt="Letmeask" />
+            <LogoBtn />
             <div>
               <RoomCode code={roomId} />
               <Button isOutlined onClick={handleEndRoom}>Encerrar sala</Button>

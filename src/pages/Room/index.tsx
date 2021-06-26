@@ -1,12 +1,11 @@
 import { FormEvent, useState } from 'react'
-import { useHistory, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { useAuth } from '../../hooks/useAuth'
 import { database } from '../../services/firebase'
 
 import { Button } from '../../components/Button'
 import { RoomCode } from '../../components/RoomCode'
-
-import logoImg from '../../assets/images/logo.svg'
+import { LogoBtn } from '../../components/LogoBtn'
 
 import './styles.scss'
 import { Question } from '../../components/Question'
@@ -23,9 +22,6 @@ export function Room() {
   const roomId = params.id
   const { user } = useAuth()
   const {title, questions} = useRoom(roomId)
-
-  const history= useHistory()
-
 
   async function handleSendQuestion(event: FormEvent) {
     event.preventDefault()
@@ -55,7 +51,8 @@ export function Room() {
       <div id="page-room">
         <header>
           <div className="content">
-            <img src={logoImg} alt="Letmeask" onClick={()=>history.push('/')} />
+            <LogoBtn />
+            {/* <img src={logoImg} alt="Letmeask" onClick={()=>history.push('/')} /> */}
             <RoomCode code={roomId} />
           </div>
         </header>
