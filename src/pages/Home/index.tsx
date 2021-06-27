@@ -21,10 +21,12 @@ export function Home() {
   async function handleCreateRoom() {
     if (!user) {
       await signInWithGoogle()
-    } else {
-
     }
-    history.push('/rooms/new')
+    if (user) {
+      // const existingRoomCode = await database.ref(`rooms`).orderByChild('authorId').equalTo(user.id).once('value')
+      // console.log(existingRoomCode)
+      history.push('/rooms/new')
+    }
   }
 
   async function handleJoinRoom(event: FormEvent) {
@@ -36,7 +38,7 @@ export function Home() {
       return
     }
 
-    if (roomRef.val().endedAt){
+    if (roomRef.val().endedAt) {
       alert('Esta sala já foi fechada')
       return
     }
