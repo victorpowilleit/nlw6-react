@@ -13,7 +13,7 @@ import '../../styles/auth.scss'
 export function NewRoom() {
 
   const history = useHistory()
-  const [newRoom, setNewRoom] = useState<string>()
+  const [newRoom, setNewRoom] = useState<string>('')
 
   async function handleCreateRoom(event: FormEvent) {
     event.preventDefault()
@@ -47,7 +47,7 @@ export function NewRoom() {
             <input
               type="text"
               placeholder="Nome da sala"
-              onChange={event => setNewRoom(event.target.value)}
+              onChange={(event) => setNewRoom(event.target.value)}
               value={newRoom}
             />
             <Button type="submit">

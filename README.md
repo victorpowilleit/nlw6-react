@@ -45,7 +45,7 @@ In the core 5 days of this project, the following technologies and tools were ex
 - [x] Link to Home Screen when clicking `logo image`
 - [x] Redirect to administration room when a new room is created
 - [ ] Show status of minor action of copy a room address
-- [ ] Remove active watchers when a room is closed
+- [x] Remove active watchers when a room is closed
 - [ ] Re-theme the app
 - [ ] Add a dark theme option
 - [ ] Responsiveness

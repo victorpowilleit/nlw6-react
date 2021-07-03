@@ -5,6 +5,7 @@ import { NewRoom } from "./pages/NewRoom";
 import { AdminRoom } from './pages/AdminRoom';
 import { Room } from './pages/Room';
 import { LogOut } from './pages/LogOut';
+import {EndRoom} from "./pages/EndRoom";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/rooms/new" exact component={NewRoom} />
           <Route path="/rooms/:id" component={Room} />
           <Route path="/admin/rooms/:id" component={AdminRoom} />
+          <Route path={"/endroom"} component={EndRoom}/>
           <Route path="/logout" component={LogOut} />
         </Switch>
       </AuthContextProvider>
