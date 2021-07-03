@@ -31,7 +31,8 @@ export function AdminRoom() {
 
   async function handleEndRoom(){
     if(window.confirm('Tem certeza que deseja a sala?\r\nEssa ação não pode ser desfeita.')){
-      await database.ref(`rooms/${roomId}`).update({endedAt: new Date()})
+//      await database.ref(`rooms/${roomId}`).update({endedAt: new Date()})
+      await database.ref(`rooms/${roomId}`).remove()
       history.push('/')
     }
   }

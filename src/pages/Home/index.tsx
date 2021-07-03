@@ -23,10 +23,14 @@ export function Home() {
       await signInWithGoogle()
     }
     if (user) {
-      // const existingRoomCode = await database.ref(`rooms`).orderByChild('authorId').equalTo(user.id).once('value')
-      // console.log(existingRoomCode)
+      const existingRoom = await database.ref(`rooms`).orderByChild('authorId').equalTo(user.id).once('value')?.then(res=>res.val())
+      const existingRoomCode = Object.keys(existingRoom || {})[0]
+      //console.log(existingRoomCode)
+        if (existingRoomCode) {
+          history.push(`/admin/rooms/${existingRoomCode}`)
+        }else{
       history.push('/rooms/new')
-    }
+    }}
   }
 
   async function handleJoinRoom(event: FormEvent) {
